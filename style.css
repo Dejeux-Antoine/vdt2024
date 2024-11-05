@@ -1,0 +1,157 @@
+/*
+Theme Name: VDT 2024
+Author: Antoine
+Description: Thème personnalisé pour le site VDT 2024
+Version: 1.0
+*/
+
+/* Style pour la page d'accueil non connectée */
+/* Style pour la page d'accueil non connectée */
+
+
+
+
+/* Couleurs */
+:root {
+    --red: #FF4655;
+    --dark-gray: #2A2D33;
+    --black: #16171B;
+    --yellow: #FFDE59;
+    --gray: #69707F;
+}
+
+/* Style global pour la page d'accueil non connectée */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--black);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.accueil-non-connecte {
+    width: 100%;
+    max-width: 420px;
+    /* Limite la largeur pour une meilleure apparence sur les écrans plus grands */
+    padding: 20px;
+}
+
+/* Logo et titre */
+.logo img {
+    width: 80px;
+    margin: 20px 0;
+}
+
+h1 {
+    color: var(--yellow);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Bouton Associer Profil */
+.associer-profil {
+    background-color: var(--dark-gray);
+    padding: 10px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.btn-associer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    background-color: var(--red);
+    border: none;
+    padding: 10px;
+    border-radius: 50px;
+    width: 100%;
+}
+
+.btn-associer img {
+    width: 20px;
+    margin-right: 8px;
+}
+
+/* Section non connecté */
+.message-non-connecte p {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message-non-connecte img {
+    width: 24px;
+    margin-right: 8px;
+}
+
+.btn-connect {
+    display: block;
+    margin: 15px auto;
+    padding: 10px 20px;
+    background-color: var(--red);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.ou-separateur {
+    color: var(--gray);
+    margin: 15px 0;
+}
+
+.btn-trouver-joueur {
+    background-color: var(--gray);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn-trouver-joueur img {
+    width: 20px;
+    margin-right: 8px;
+}
+
+/* Bottom Navigation */
+.navigation-bas {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 420px;
+    background-color: var(--dark-gray);
+    padding: 10px 0;
+    border-top: 1px solid var(--gray);
+}
+
+.navigation-bas a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navigation-bas img {
+    width: 24px;
+    margin-bottom: 4px;
+}
+
+.profil-actif {
+    color: var(--red);
+}
