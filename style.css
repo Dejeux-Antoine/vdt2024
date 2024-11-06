@@ -9,149 +9,785 @@ Version: 1.0
 /* Style pour la page d'accueil non connectée */
 
 
-
-
-/* Couleurs */
-:root {
-    --red: #FF4655;
-    --dark-gray: #2A2D33;
-    --black: #16171B;
-    --yellow: #FFDE59;
-    --gray: #69707F;
+/* Header */
+/* Header principal */
+@font-face {
+    font-family: 'Valorant';
+    src: url('fonts/valorant.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-/* Style global pour la page d'accueil non connectée */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: var(--black);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    background-color: #16171B;
+    color: #FFFFFF;
+}
+
+.site-header {
+    background-color: #16171B;
     color: white;
+    padding: 10px 20px;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo .logo-image {
+    width: 40px;
+    height: 40px;
+}
+
+.header-title h1 {
+    font-family: 'Valorant', sans-serif;
+    font-size: 2rem;
+    font-weight: normal;
+    color: #FFDE59;
+    margin: 0;
+}
+
+.header-user {
+    display: flex;
+    align-items: center;
+}
+
+.header-user a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #FFDE59;
+    font-weight: bold;
+}
+
+.header-user .user-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.header-user .user-name {
+    color: white;
+    font-weight: bold;
+}
+
+/* Menu principal */
+.main-menu {
+    background-color: #2A2D33;
+    text-align: center;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100vh;
-    overflow: hidden;
 }
 
-.accueil-non-connecte {
-    width: 100%;
-    max-width: 420px;
-    /* Limite la largeur pour une meilleure apparence sur les écrans plus grands */
+.menu li {
+    margin: 0;
+    padding: 0;
+}
+
+.menu li a {
+    display: block;
+    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Conteneur principal du profil */
+.profil-joueur {
+    max-width: 400px;
+    margin: 20px auto;
     padding: 20px;
+    background-color: #2A2D33;
+    border-radius: 10px;
+    text-align: center;
 }
 
-/* Logo et titre */
-.logo img {
+/* Pseudo et photo de profil */
+.profil-joueur h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.photo-profil {
     width: 80px;
-    margin: 20px 0;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
 }
 
-h1 {
-    color: var(--yellow);
-    font-size: 24px;
+/* Section équipe actuelle */
+.profil-joueur .equipe-actuelle {
+    margin: 20px 0;
+    background-color: #69707F;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.profil-joueur .equipe-actuelle h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.profil-joueur .equipe-actuelle p {
+    font-size: 1rem;
+    color: #FFDE59;
+}
+
+.button-equipe {
+    display: inline-block;
+    background-color: #FF4655;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Section des statistiques */
+.statistiques-joueur {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.statistiques-joueur p {
+    background-color: #69707F;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #FFFFFF;
+}
+
+.statistiques-joueur p strong {
+    color: #FFDE59;
+}
+
+/* Style pour le bouton de modification */
+.button-modifier-profil {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF4655;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Conteneur principal des joueurs */
+.joueurs-container {
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.joueurs-container h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
-/* Bouton Associer Profil */
-.associer-profil {
-    background-color: var(--dark-gray);
+/* Barre de recherche */
+#search-bar {
+    width: 90%;
     padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 15px;
     border-radius: 8px;
-    margin: 20px 0;
-}
-
-.btn-associer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 18px;
-    background-color: var(--red);
     border: none;
-    padding: 10px;
-    border-radius: 50px;
-    width: 100%;
-}
-
-.btn-associer img {
-    width: 20px;
-    margin-right: 8px;
-}
-
-/* Section non connecté */
-.message-non-connecte p {
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.message-non-connecte img {
-    width: 24px;
-    margin-right: 8px;
-}
-
-.btn-connect {
-    display: block;
-    margin: 15px auto;
-    padding: 10px 20px;
-    background-color: var(--red);
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.ou-separateur {
-    color: var(--gray);
-    margin: 15px 0;
-}
-
-.btn-trouver-joueur {
-    background-color: var(--gray);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-.btn-trouver-joueur img {
-    width: 20px;
-    margin-right: 8px;
-}
-
-/* Bottom Navigation */
-.navigation-bas {
-    display: flex;
-    justify-content: space-around;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    max-width: 420px;
-    background-color: var(--dark-gray);
-    padding: 10px 0;
-    border-top: 1px solid var(--gray);
-}
-
-.navigation-bas a {
-    color: white;
-    text-decoration: none;
-    font-size: 12px;
+    background-color: #69707F;
+    color: #FFF;
     text-align: center;
+}
+
+#search-bar::placeholder {
+    color: #FFF;
+}
+
+/* Liste des joueurs */
+.liste-joueurs {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.joueur-item {
+    margin-bottom: 10px;
+    background-color: #2A2D33;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.photo-joueur {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.joueur-pseudo {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #FFF;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.button-creer-equipe {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto 20px;
+    padding: 10px;
+    background-color: #FF4655;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+
+/* Titre de la section */
+h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Liste des équipes */
+.liste-equipes {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 15px;
 }
 
-.navigation-bas img {
-    width: 24px;
-    margin-bottom: 4px;
+/* Carte de chaque équipe */
+.equipe {
+    background-color: #2A2D33;
+    border-radius: 8px;
+    padding: 15px;
+    width: 90%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.profil-actif {
-    color: var(--red);
+/* Contenu de l'équipe */
+.equipe-content {
+    text-align: center;
+}
+
+/* Logo de l'équipe */
+.logo-equipe {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Nom de l'équipe */
+.equipe h2 {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* Bouton Voir l'équipe */
+.button-voir-equipe {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF4655;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.equipe-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.logo-container {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.logo-equipe {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.joueurs-title {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.liste-joueurs {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.joueur-item {
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+
+
+.joueur-item a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    width: 100%;
+}
+
+.photo-joueur {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.joueur-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.joueur-non-defini {
+    text-align: center;
+    color: #888;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.titre-page {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.liste-matchs {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 20px;
+}
+
+.match {
+    background-color: #2A2D33;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.date-match {
+    color: #9E9E9E;
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.statut-match {
+    text-align: left;
+    color: #FF4655;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.contenu-match {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo-equipe {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.nom-equipe {
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.score {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.score span {
+    margin: 0 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.profil-non-associe {
+    text-align: center;
+    color: #9E9E9E;
+    margin: 20px;
+}
+
+.profil-non-associe h2 {
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.profil-non-associe p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #CCCCCC;
+}
+
+.button-connexion {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF4655;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.button-connexion:hover {
+    background-color: #e03d4c;
+}
+
+.ou-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    color: #9E9E9E;
+}
+
+.ou-divider hr {
+    width: 30%;
+    border: 1px solid #9E9E9E;
+    margin: 0 10px;
+}
+
+.ou-divider span {
+    font-size: 14px;
+}
+
+.recherche-joueur {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.champ-recherche {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #444;
+    border-radius: 5px 0 0 5px;
+    background-color: #333;
+    color: #FFFFFF;
+    outline: none;
+}
+
+.button-recherche {
+    padding: 8px 12px;
+    background-color: #444;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.button-recherche:hover {
+    background-color: #555;
+}
+
+.button-trouver-joueur {
+    display: inline-block;
+        padding: 10px 20px;
+        background-color: #69707F;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+/* Styles des formulaires de connexion et d'inscription */
+form {
+    background-color: #2A2D33;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 0 auto 20px;
+}
+
+form h2 {
+    font-size: 1.5rem;
+    color: #FFDE59;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form p {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 1rem;
+    color: #FFFFFF;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3A3F47;
+    color: #FFFFFF;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #FF4655;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #e03d4c;
+}
+
+input[type="file"] {
+    background-color: transparent;
+}
+
+.form-alternative {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.form-alternative a {
+    color: #FFDE59;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-alternative a:hover {
+    text-decoration: underline;
+}
+
+/* Message d'erreur */
+p[style="color:red;"] {
+    color: #FF4655;
+    text-align: center;
+    font-weight: bold;
 }
